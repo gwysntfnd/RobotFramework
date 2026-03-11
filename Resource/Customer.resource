@@ -92,7 +92,7 @@ Add Multiple Customers
     END
 
 Update Multiple Customers
-    [Arguments]    @{users}    ${start_row}
+    [Arguments]    @{users}    ${start_row}=6
     ${row_number}    Set Variable    ${start_row}
 
     FOR    ${user}    IN    @{users}
