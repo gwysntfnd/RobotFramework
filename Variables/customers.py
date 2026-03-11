@@ -1,0 +1,12 @@
+#Variables / customers.py
+cust_txt_first_name = '//input[@name="first_name"]'
+cust_txt_last_name = '//input[@name="last_name"]'
+cust_txt_email = '//input[@name="email"]'
+cust_txt_birthday = '//input[@name="birthday"]'
+cust_txt_address = '//textarea[@name="address"]'
+cust_txt_city = '//input[@name="city"]'
+cust_txt_stateAbbr = '//input[@name="stateAbbr"]'
+cust_txt_zipcode = '//input[@name="zipcode"]'
+cust_txt_password = '//input[@name="password"]'
+cust_txt_confirm_password = '//input[@name="confirm_password"]'
+cust_btn_save = '//button[@aria-label="Save"]'
