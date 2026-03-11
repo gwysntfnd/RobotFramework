@@ -92,8 +92,8 @@ Add Multiple Customers
     END
 
 Update Multiple Customers
-    [Arguments]    @{users}    ${start_row}=1
-    ${row_number}=    Set Variable    ${start_row}
+    [Arguments]    @{users}    ${start_row}
+    ${row_number}    Set Variable    ${start_row}
 
     FOR    ${user}    IN    @{users}
         Log To Console    \n--- Updating row ${row_number} with ${user['first_name']} ${user['last_name']} ---
