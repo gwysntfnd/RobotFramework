@@ -21,7 +21,7 @@ TEST-2
     ...    TASK 2: Use API users 6-10 (index 5-9) to overwrite table rows 6-10.
     ...    For each row: replace all fields, then verify name, email, and all details.
 
-    Update Multiple Customers   @{USERS}
+    Update Multiple Customers   @{USERS}[5:10]
 
 TEST-3
     [Documentation]
