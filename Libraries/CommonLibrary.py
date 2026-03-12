@@ -11,17 +11,14 @@ class CommonLibrary:
         users = response.json()
 
         for user in users:
-            # Split full name using shortest string removal logic
             name_list = self.remove_shortest_string(user['name'])
             user['first_name'] = name_list[0]
             user['last_name'] = name_list[1] if len(name_list) > 1 else "Unknown"
             user.pop('name')
-
-            # Generate birthday and password
+            
             user['birthday'] = self.get_random_birthday()
             user['password'] = self.generate_password()
 
-            # Create state abbreviation from address
             user["address"]["stateAbbr"] = (
                 str(user["address"]["street"][0]) +
                 str(user["address"]["suite"][0]) +
