@@ -63,7 +63,7 @@ Add Multiple Customers
         Navigate    Customers
         Open Create Modal
 
-        ${values}=    Create List
+        ${values}     Create List
         ...    ${user['first_name']}    
         ...    ${user['last_name']}     
         ...    ${user['email']}         
@@ -76,7 +76,7 @@ Add Multiple Customers
         ...    ${user['password']}
 
         FOR    ${i}    ${locator}    IN ENUMERATE    @{CUSTOMER_LOCATORS}
-            ${value}=    Set Variable    ${values[${i}]}
+            ${value}     Set Variable    ${values[${i}]}
             IF    '${locator}' == '${cust_txt_birthday}'
                 Input Text    ${locator}    ${value}
             ELSE
@@ -112,7 +112,7 @@ Update Multiple Customers
         ...    ${user['password']}
 
         FOR    ${i}    ${locator}    IN ENUMERATE    @{CUSTOMER_LOCATORS}
-            ${value}=    Set Variable    ${values[${i}]}
+            ${value}     Set Variable    ${values[${i}]}
             IF    '${locator}' == '${cust_txt_birthday}'
                 Input Text    ${locator}    ${value}
             ELSE
@@ -189,8 +189,6 @@ Verify If Customer Is Added In The Table
     [Arguments]    ${user}
     ${user_row}    Get Customer Row    ${user}
     Should Not Be Equal As Strings    None    ${user_row}
-
-
 
 Log News Cell
     [Arguments]    ${row_num}    ${col_num}    ${header}
